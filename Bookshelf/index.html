@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Книжная полка</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<h1>Книжная полка</h1>
+			<button type="button" class="button-open" id="modal-open">Добавить книгу</button>
+		</div>
+
+		<div class="book-panel">
+			<div class="book">
+
+			</div>
+		</div>
+
+		<div class="modal" id="modal-add-book">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h4>Добавить книгу</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<label for="book-name" class="form-label">Наименование</label>
+							<div>
+								<input type="text" class="form-control" name="book-name" id="book-name" value="Золушка">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<label for="book-author" class="form-label">Автор</label>
+							<div>
+								<input type="text" class="form-control" name="book-author" id="book-author" value="Шарль Перро">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<label for="book-year" class="form-label">Год выпуска</label>
+							<div>
+								<input type="text" class="form-year" name="book-year" id="book-year" value="2017">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<label for="book-cover" class="form-label">Изображение</label>
+							<div>
+								<input type="text" class="form-cover" name="book-cover" id="book-cover" value="https://img.labirint.ru/rcimg/843b76c9cc0a7aa3c93cb1403d26f209/960x540/comments_pic/1952/origin_0_dfea2e341ad9fc3de02ed3e10c4b01b0.jpg?1577104778">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="button-ad-book" id="modal-save">Сохранить</button>
+					<button type="button" class="button-close" id="modal-close">Отмена</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer-copyright">&copy; 2020 Roman Troshin</div>
+		<div class="footer-contacts">Контакты:<br><a href="R.R.Troshin@yandex.ru">R.R.Troshin@yandex.ru</a><br>+7 (925) 350-44-91</div>
+	</div>
+
+	<script type="text/javascript" src="bookshelf.js"></script>
+
+</body>
+</html>

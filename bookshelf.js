@@ -1,163 +1,306 @@
-var modal = document.getElementById('modal-add-book');
-
-var buttonOpen = document.getElementById('modal-open');
-var buttonClose1 = document.getElementById('modal-close');
-var buttonClose2 = document.getElementsByClassName("close")[0];
-var buttonSave = document.getElementById('modal-save');
-
-buttonOpen.onclick = function()
+window.onload = function()
 {
-	modal.style.display = "block";
-}
+	var books = {};
+	var article = 0;
+	var modal = document.getElementById('modal-add-book');
 
-buttonClose1.onclick = function()
-{
-	modal.style.display = "none";
-}
+	var buttonOpen = document.getElementById('modal-open');
+	var buttonClose1 = document.getElementById('modal-close');
+	var buttonClose2 = document.getElementsByClassName("close")[0];
+	var buttonSave = document.getElementById('modal-save');
 
-buttonClose2.onclick = function()
-{
-	modal.style.display = "none";
-}
+	buttonOpen.onclick = function()
+	{
+		modal.style.display = "block";
+	}
 
-buttonSave.onclick = function()
-{
-	addBook();
-	modal.style.display = "none";
-}
-
-/*
-window.onclick = function(event)
-{
-	if (event.target == modal)
+	buttonClose1.onclick = function()
+	{
 		modal.style.display = "none";
-}
-*/
+	}
 
-var books = [];
-var article = 0;
+	buttonClose2.onclick = function()
+	{
+		modal.style.display = "none";
+	}
 
-function addBook()
-{	
-	article++;
-	books.push(article);
+	buttonSave.onclick = function()
+	{
+		addBook();
+		modal.style.display = "none";
+	}
 
-	var book = [];
-	book[0] = document.getElementById("book-cover").value;
-	book[1] = document.getElementById("book-name").value;
-	book[2] = document.getElementById("book-author").value;
-	book[3] = document.getElementById("book-year").value;
+	/*
+	window.onclick = function(event)
+	{
+		if (event.target == modal)
+			modal.style.display = "none";
+	}
+	*/
 
-	books[article] = book;
-	drawBook(article);
-}
+	function addBook()
+	{	
+		var data = buttonSave.getAttribute('data');
+		//console.log(data);
 
-function drawBook()
-{
-	var bookArticle = document.createElement('input');
-	bookArticle.className = "book-article";
-	bookArticle.value = article;
-	bookArticle.innerHTML = document.getElementsByClassName('book-article').value;
+		var book = [];
+		for (var i = 0; i < 4; i++)
+		{
+			book[i] = [];
+			for (var j = 0; j < 2; j++)
+			{
+				book[i][j] = 0;
+			}
+		}
+		
+		//console.log(book);
+		
+		book[0][0] = document.getElementById("book-cover").className;
+		book[0][1] = document.getElementById("book-cover").value;
+		book[1][0] = document.getElementById("book-name").className;
+		book[1][1] = document.getElementById("book-name").value;
+		book[2][0] = document.getElementById("book-author").className;
+		book[2][1] = document.getElementById("book-author").value;
+		book[3][0] = document.getElementById("book-year").className;
+		book[3][1] = document.getElementById("book-year").value;
 
-	var divHeader = document.createElement('div');
-	divHeader.className = "book-header";
+		//console.log(formData);
 
-	var bookCover = document.createElement('img');
-	bookCover.className = "book-cover";
-	bookCover.src = books[article][0];
+		/*
+		for (var i = 0; i < 4; i++)
+		{
+			books[i] = [];
+			for (var j = 0; j < 1; j++)
+			{
+				books[i] = book[i][j];
+			}
+		}
+		*/
 
-	var divContent = document.createElement('div');
-	divContent.className = "book-content";
+		if (data == undefined)
+		{
+			article++;	
+			books[article] = book;
 
-	var bookName = document.createElement('h4');
-	bookName.className = "book-name";
-	bookName.innerHTML = books[article][1];
+			//console.log(books);
 
-	var bookAuthor = document.createElement('h5');
-	bookAuthor.className = "book-author";
-	bookAuthor.innerHTML = books[article][2];
+			drawBook(article);
+		}
+		else
+		{
+			books[data] = book;
+			//console.log('book = ', book);
+			//console.log('books[data] = ', books[data]);
+			drawBook(data);
+		}
+	}
 
-	var bookYear = document.createElement('h5');
-	bookYear.className = "book-year";
-	bookYear.innerHTML = books[article][3];
+	function drawBook(article)
+	{
+		var book = document.querySelectorAll('.book[data = "' + article + '"]');
+		//console.log(book);
+		if (book.length == 0)
+		{
+			var book = document.createElement('div');
+			book.className = "book";
+			book.setAttribute('data', article);
 
-	var divFooter = document.createElement('div');
-	divFooter.className = "book-footer";
+			var divHeader = document.createElement('div');
+			divHeader.className = "book-header";
+			divHeader.id = "book-header";
 
-	var buttonEdit = document.createElement('button');
-	buttonEdit.className = "button-edit";
-	buttonEdit.innerHTML = 'Изменить';
-	buttonEdit.onclick = editBook;
+			var bookCover = document.createElement('img');
+			bookCover.className = "book-cover";
+			bookCover.src = books[article][0][1];
 
-	var buttonDelete = document.createElement('button');
-	buttonDelete.className = "button-delete";
-	buttonDelete.innerHTML = 'Удалить';
-	//buttonDelete.onclick = deleteBook;
+			var divContent = document.createElement('div');
+			divContent.className = "book-content";
+			divContent.id = "book-content";
 
-	divHeader.appendChild(bookCover);
-	divContent.appendChild(bookName);
+			var bookName = document.createElement('h4');
+			bookName.className = "book-name";
+			bookName.innerHTML = books[article][1][1];
 
-	divContent.appendChild(bookArticle);
+			var bookAuthor = document.createElement('h5');
+			bookAuthor.className = "book-author";
+			bookAuthor.innerHTML = books[article][2][1];
 
-	divContent.appendChild(bookAuthor);
-	divContent.appendChild(bookYear);
-	divFooter.appendChild(buttonEdit);
-	divFooter.appendChild(buttonDelete);
+			var bookYear = document.createElement('h5');
+			bookYear.className = "book-year";
+			bookYear.innerHTML = books[article][3][1];
 
-	var book = document.createElement('div');
-	book.className = "book";
+			var divFooter = document.createElement('div');
+			divFooter.className = "book-footer";
 
-	book.appendChild(divHeader);
-	book.appendChild(divContent);
-	book.appendChild(divFooter);
+			var buttonEdit = document.createElement('button');
+			buttonEdit.className = "button-edit";
+			buttonEdit.id = "button-edit";
+			buttonEdit.innerHTML = 'Изменить';
+			buttonEdit.setAttribute('data', article);
+			buttonEdit.onclick = editBook;
 
-	var bookPanel = document.querySelector('.book-panel');
-	bookPanel.appendChild(book);
+			var buttonDelete = document.createElement('button');
+			buttonDelete.className = "button-delete";
+			buttonDelete.innerHTML = 'Удалить';
+			buttonDelete.setAttribute('data', article);
+			buttonDelete.onclick = deleteBook;
 
-	buttonDelete.onclick = deleteBook;
-}
+			divHeader.appendChild(bookCover);
+			divContent.appendChild(bookName);
+			divContent.appendChild(bookAuthor);
+			divContent.appendChild(bookYear);
+			divFooter.appendChild(buttonEdit);
+			divFooter.appendChild(buttonDelete);
 
-function editBook()
-{
-	modal.style.display = "block";
+			book.appendChild(divHeader);
+			book.appendChild(divContent);
+			book.appendChild(divFooter);
 
-	bookCover.src = document.getElementById("book-cover").value;
-	bookName.innerHTML = document.getElementById("book-name").value;
-	bookAuthor.innerHTML = document.getElementById("book-author").value;
-	bookYear.innerHTML = document.getElementById("book-year").value;
+			var bookPanel = document.querySelector('.book-panel');
+			bookPanel.appendChild(book);
+		}
+		else
+		{
+			//var book = [];
+			//book[article] = document.querySelector('[data = "' + article + '"]');
 
-	divHeader.replaceChild(bookCover);
-	divContent.replaceChild(bookName);
-	divContent.replaceChild(bookAuthor);
-	divContent.replaceChild(bookYear);
+			//var newBook = document.createElement('div');
+			//newBook.className = "book";
 
-	book.replaceChild(divHeader);
-	book.replaceChild(divContent);
+			//var divHeader = document.querySelector("book-header");
+			//var divHeader = document.getElementById('book-header');
+			//console.log('divHeader = ' ,divHeader);
+			//var newDivHeader = document.createElement('div');
+			//newDivHeader.className = "book-header";
 
-	var bookPanel = document.querySelector('.book-panel');
-	bookPanel.replaceChild(book);
-}
+			//bookCover = document.getElementsByClassName('book-cover[value]');	
+			var bC = document.querySelector('.book[data = "' + article + '"]');
+			var bkCr = bC.querySelector('.book-header');
+			bookCover = bkCr.querySelector('.book-cover');	
+			bookCover.src = books[article][0][1];
+			
+			//var newBookCover = document.createElement('img');
+			//newBookCover.className = "book-cover";
+			//newBookCover.src = books[article][0][1];
 
-function deleteBook()
-{
-	article = document.getElementsByClassName('book-article').value;
-	books.splice(article, 1);
 
-	//delete books(article);
-	divHeader.removeChild(bookCover);
-	divContent.removeChild(bookName);
+			//var divContent = document.getElementsByClassName('book-content')[article];
+			//var divContent = document.getElementById('book-content');
+			
+			//var newDivContent = document.createElement('div');
+			//newDivContent.className = "book-content";
 
-	divContent.removeChild(bookArticle);
+			//bookName = document.getElementsByClassName('book-name').value;
+			var bN = document.querySelector('.book[data = "' + article + '"]');
+			var bkNm = bN.querySelector('.book-content');
+			bookName = bkNm.querySelector('.book-name');
+			bookName = books[article][1][1];
+			
+			//var newBookName = document.createElement('h4');
+			//newBookName.className = "book-name";
+			//newBookName.innerHTML = books[article][1][1];
 
-	divContent.removeChild(bookAuthor);
-	divContent.removeChild(bookYear);
-	divFooter.removeChild(buttonEdit);
-	divFooter.removeChild(buttonDelete);
 
-	book.removeChild(divHeader);
-	book.removeChild(divContent);
-	book.removeChild(divFooter);
+			//bookAuthor = document.getElementsByClassName('book-author').value;
+			var bA = document.querySelector('.book[data = "' + article + '"]');
+			var bkAr = bA.querySelector('.book-content');
+			bookAuthor = bkAr.querySelector('.book-author');
+			bookAuthor.innerHTML = books[article][2][1];
+			
+			//var newBookAuthor = document.createElement('h5');
+			//newBookAuthor.className = "book-author";
+			//newBookAuthor.innerHTML = books[article][2][1];
 
-	var bookPanel = document.querySelector('.book-panel');
-	bookPanel.removeChild(book);
+
+			//bookYear = document.getElementsByClassName('book-year').value;
+			var bY = document.querySelector('.book[data = "' + article + '"]');
+			var bkYr = bY.querySelector('.book-content');
+			bookYear = bkYr.querySelector('.book-year');
+			bookYear.innerHTML = books[article][3][1];
+			
+			//var newBookYear = document.createElement('h5');
+			//newBookYear.className = "book-year";
+			//newBookYear.innerHTML = books[article][3][1];
+
+
+			//var divFooter = document.querySelector('.book-footer');
+
+			//console.log('newBookCover = ', newBookCover);
+			//console.log('bookCover = ', bookCover);
+			//console.log('newBookName = ', newBookName);
+			//console.log('bookName = ', bookName);
+
+			//newDivHeader.appendChild(newBookCover);
+			//newDivContent.appendChild(newBookName);
+			//newDivContent.appendChild(newBookAuthor);
+			//newDivContent.appendChild(newBookYear);
+
+			//book[article].appendChild(newDivHeader);
+			//book[article].appendChild(newDivContent);
+	
+			//var bookPanel = document.querySelector('.book-panel');
+			//bookPanel.appendChild(newBook);
+			
+	//		divHeader.replaceChild(newBookCover, bookCover);
+	//		divContent.replaceChild(newBookName, bookName);
+	//		divContent.replaceChild(newBookAuthor, bookAuthor);
+	//		divContent.replaceChild(newBookYear, bookYear);
+
+			//divHeader.replaceChild(bookCover, newBookCover);
+			//divContent.replaceChild(bookName, newBookName);
+			//divContent.replaceChild(bookAuthor, newBookAuthor);
+			//divContent.replaceChild(bookYear, newBookYear);
+
+			//console.log('newBookName = ', newBookName);
+			//console.log('bookName = ', bookName);
+
+			//book[article].replaceChild(divHeader, newDivHeader);
+			//book[article].replaceChild(divContent, newDivContent);
+			//book[article].appendChild(divFooter);
+			
+			//bookPanel.replaceChild(book, newBook);
+
+			buttonSave.removeAttribute('data');
+		}
+	}
+
+	function editBook()
+	{
+		var data = this.getAttribute('data');
+		//console.log(data);
+		var valueCover = document.querySelector('.book-cover');
+		var valueName = document.querySelector('.book-name');
+		var valueAuthor = document.querySelector('.book-author');
+		var valueYear = document.querySelector('.book-year');
+
+		//console.log(valueName);	
+
+		document.getElementById('book-cover').value = books[data][0][1];
+		document.getElementById('book-name').value = books[data][1][1];
+		document.getElementById('book-author').value = books[data][2][1];
+		document.getElementById('book-year').value = books[data][3][1];
+
+		//console.log(bookName);
+
+		modal.style.display = "block";
+		buttonSave.setAttribute('data', data);
+	}
+
+	function deleteBook()
+	{
+		var data = this.getAttribute('data');
+		var bookPanel = document.querySelector('.book-panel');
+		//console.log(bookPanel);
+		var book = document.querySelector('[data = "' + data + '"]');
+		//console.log('book =',book);
+		//console.log('data =', data);
+		//console.log('book[data] = ', book[data]);
+		//console.log('book.length = ', book.length);
+		bookPanel.removeChild(book);
+		//console.log(books);	
+		//console.log('books[data] = ', books[data]);	
+		delete books[data];
+		//console.log(books);
+		//console.log('books[data] = ', books[data]);	
+	}
 }

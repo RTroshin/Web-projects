@@ -8,7 +8,7 @@
 
 body
 {
-	background: #f4f7f6;
+	background: #eeeeee;
 }
 
 .content
@@ -22,7 +22,7 @@ body
 .header
 {
 	min-width: 1300px;
-    background: linear-gradient(to right, #783516, #111111);
+    background: linear-gradient(to right, #555555, #111111);
 	height: 80px;
     margin: auto;
 }
@@ -55,7 +55,7 @@ body
 .button-open
 {
 	float: right;
-	width: 200px;
+	width: 180px;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -66,7 +66,7 @@ body
     color: #ffffff;
     line-height: 25px;
     padding: 5px;
-    margin-right: 50px;
+    margin-right: 100px;
     border: 0;
     user-select: none;
     outline: none;
@@ -87,30 +87,41 @@ body
 
 .book-panel
 {
-	min-width: 1300px;
-    background: #cccccc;
-    margin-left: 50px;
-    margin-right: 50px;
+	min-width: 1000px;
+    background: #eeeeee;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .book
 {
+    position: relative;
     height: 250px;
     padding-top: 25px;
+    margin-bottom: 32px;
+}
+
+.book hr
+{
+    position: relative;
+    /* width: 90%; */
+    /* left: 5%; */
+    margin-top: 20px;
 }
 
 .book-header
 {
-    background-color: red;
+    background-color: #eeeeee;
 	display: table-cell;
-	width: 30%;
+	width: 15%;
     height: 250px;
 }
 
 .book-header img
 {
     position: absolute;
-    height: 250px;
+    height: 266px;
+    width: 195px
 }
 
 .book-cover
@@ -122,10 +133,12 @@ body
 
 .book-content
 {
-    background-color: yellow;
+    background-color: #ffffff;
 	display: table-cell;
 	width: 60%;
     height: 250px;
+    border-radius: 5px;
+    padding-left: 90px;
 }
 
 .book-content h4
@@ -135,7 +148,7 @@ body
     width: 100%;
     text-align: left;
     color: #2e353d;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 500;
     padding: 2px;
 }
@@ -154,10 +167,12 @@ body
 
 .book-footer
 {
-    background-color: green;
+    background: linear-gradient(to top, #cccccc, #aaaaaa);
 	display: table-cell;
 	width: 10%;
     height: 250px;
+    border-radius: 5px;
+    padding: 7px;
 }
 
 .button-edit
@@ -165,6 +180,7 @@ body
     display: inline-block;
     position: relative;
     top: 50px;
+    left: 7px;
     width: 150px;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
@@ -203,6 +219,7 @@ body
     display: inline-block;
     position: relative;
     top: 50px;
+    left: 7px;
     width: 150px;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
@@ -444,28 +461,18 @@ body
 
 .footer
 {
-    background: linear-gradient(to top, #434445, #000000);
-    width: 100%;
+    position: relative;
     float: right;
-    height: 100px;
-    padding-top: 30px;
-    padding-right: 70px;
-    text-align: right;
-    color: #a4a4a4;
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 18px;
-}
-
-.footer
-{
     background: linear-gradient(to top, #434445, #111111);
     width: 100%;
     height: 110px;
+    text-align: right;
     color: #a4a4a4;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 100;
     line-height: 18px;
+    padding-top: 30px;
+    padding-right: 70px;
 }
 
 .footer-copyright

@@ -52,8 +52,8 @@ window.onload = function()
 	// Функции для добавления, изменения и удаления книг
 
 	function addBook()
-	{
-		var data = buttonSave.getAttribute('data');
+	{	
+		var data = buttonSave.getAttribute('data-article');
 		//console.log('data = ', data);
 
 		var book = [];
@@ -111,13 +111,13 @@ window.onload = function()
 
 	function drawBook(article)
 	{
-		var book = document.querySelectorAll('.book[data = "' + article + '"]');
+		var book = document.querySelectorAll('.book[data-article = "' + article + '"]');
 		//console.log('book = ', book);
 		if (book.length == 0)
 		{
 			var book = document.createElement('div');
 			book.className = "book";
-			book.setAttribute('data', article);
+			book.setAttribute('data-article', article);
 
 			var divHeader = document.createElement('div');
 			divHeader.className = "book-header";
@@ -150,13 +150,13 @@ window.onload = function()
 			buttonEdit.className = "button-edit";
 			buttonEdit.id = "button-edit";
 			buttonEdit.innerHTML = 'Изменить';
-			buttonEdit.setAttribute('data', article);
+			buttonEdit.setAttribute('data-article', article);
 			buttonEdit.onclick = editBook;
 
 			var buttonDelete = document.createElement('button');
 			buttonDelete.className = "button-delete";
 			buttonDelete.innerHTML = 'Удалить';
-			buttonDelete.setAttribute('data', article);
+			buttonDelete.setAttribute('data-article', article);
 			buttonDelete.onclick = deleteBook;
 
 			divHeader.appendChild(bookCover);
@@ -179,7 +179,7 @@ window.onload = function()
 		else
 		{
 			//var book = [];
-			//book[article] = document.querySelector('[data = "' + article + '"]');
+			//book[article] = document.querySelector('[data-article = "' + article + '"]');
 
 			//var newBook = document.createElement('div');
 			//newBook.className = "book";
@@ -191,7 +191,7 @@ window.onload = function()
 			//newDivHeader.className = "book-header";
 
 			//bookCover = document.getElementsByClassName('book-cover[value]');	
-			var bC = document.querySelector('.book[data = "' + article + '"]');
+			var bC = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkCr = bC.querySelector('.book-header');
 			bookCover = bkCr.querySelector('.book-cover');	
 			bookCover.src = books[article][0][1];
@@ -208,7 +208,7 @@ window.onload = function()
 			//newDivContent.className = "book-content";
 
 			//bookName = document.getElementsByClassName('book-name').value;
-			var bN = document.querySelector('.book[data = "' + article + '"]');
+			var bN = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkNm = bN.querySelector('.book-content');
 			bookName = bkNm.querySelector('.book-name');
 			bookName.innerHTML = books[article][1][1];
@@ -219,7 +219,7 @@ window.onload = function()
 
 
 			//bookAuthor = document.getElementsByClassName('book-author').value;
-			var bA = document.querySelector('.book[data = "' + article + '"]');
+			var bA = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkAr = bA.querySelector('.book-content');
 			bookAuthor = bkAr.querySelector('.book-author');
 			bookAuthor.innerHTML = books[article][2][1];
@@ -230,7 +230,7 @@ window.onload = function()
 
 
 			//bookYear = document.getElementsByClassName('book-year').value;
-			var bY = document.querySelector('.book[data = "' + article + '"]');
+			var bY = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkYr = bY.querySelector('.book-content');
 			bookYear = bkYr.querySelector('.book-year');
 			bookYear.innerHTML = books[article][3][1] + ' г.';
@@ -277,13 +277,13 @@ window.onload = function()
 			
 			//bookPanel.replaceChild(book, newBook);
 
-			buttonSave.removeAttribute('data');
+			buttonSave.removeAttribute('data-article');
 		}
 	}
 
 	function editBook()
 	{
-		var data = this.getAttribute('data');
+		var data = this.getAttribute('data-article');
 		//console.log(data = ', data);
 		var valueCover = document.querySelector('.book-cover');
 		var valueName = document.querySelector('.book-name');
@@ -300,15 +300,15 @@ window.onload = function()
 		//console.log('bookName = ', bookName);
 
 		modal.style.display = "block";
-		buttonSave.setAttribute('data', data);
+		buttonSave.setAttribute('data-article', data);
 	}
 
 	function deleteBook()
 	{
-		var data = this.getAttribute('data');
+		var data = this.getAttribute('data-article');
 		var bookPanel = document.querySelector('.book-panel');
 		//console.log('bookPanel = ', bookPanel);
-		var book = document.querySelector('[data = "' + data + '"]');
+		var book = document.querySelector('[data-article = "' + data + '"]');
 		//console.log('book = ',book);
 		//console.log('data = ', data);
 		//console.log('book[data] = ', book[data]);

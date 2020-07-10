@@ -4,9 +4,18 @@ window.onload = function()
 	var article = 0;
 	var modal = document.getElementById('modal-add-book');
 
+	var saveBooks = localStorage.getItem('library');
+    if (saveBooks)
+	{
+		article++;
+        books = JSON.parse(saveBooks);
+		drawBook(article);
+	}
+
 	var buttonOpen = document.getElementById('modal-open');
 	var buttonClose1 = document.getElementById('modal-close');
 	var buttonClose2 = document.getElementsByClassName("close")[0];
+	//var buttonClose2 = document.querySelector(".close");	
 	var buttonSave = document.getElementById('modal-save');
 
 	buttonOpen.onclick = function()
@@ -38,10 +47,12 @@ window.onload = function()
 	}
 	*/
 
+	// Функции для добавления, изменения и удаления книг
+
 	function addBook()
-	{	
+	{		
 		var data = buttonSave.getAttribute('data');
-		//console.log(data);
+		//console.log('data = ', data);
 
 		var book = [];
 		for (var i = 0; i < 4; i++)
@@ -53,7 +64,7 @@ window.onload = function()
 			}
 		}
 		
-		//console.log(book);
+		//console.log('book = ', book);
 		
 		book[0][0] = document.getElementById("book-cover").className;
 		book[0][1] = document.getElementById("book-cover").value;
@@ -82,7 +93,7 @@ window.onload = function()
 			article++;	
 			books[article] = book;
 
-			//console.log(books);
+			//console.log('books = ', books);
 
 			drawBook(article);
 		}
@@ -93,12 +104,13 @@ window.onload = function()
 			//console.log('books[data] = ', books[data]);
 			drawBook(data);
 		}
+		localStorage.setItem('library', JSON.stringify(books));
 	}
 
 	function drawBook(article)
 	{
 		var book = document.querySelectorAll('.book[data = "' + article + '"]');
-		//console.log(book);
+		//console.log('book = ', book);
 		if (book.length == 0)
 		{
 			var book = document.createElement('div');
@@ -127,7 +139,7 @@ window.onload = function()
 
 			var bookYear = document.createElement('h5');
 			bookYear.className = "book-year";
-			bookYear.innerHTML = books[article][3][1];
+			bookYear.innerHTML = books[article][3][1] + ' г.';
 
 			var divFooter = document.createElement('div');
 			divFooter.className = "book-footer";
@@ -150,11 +162,14 @@ window.onload = function()
 			divContent.appendChild(bookAuthor);
 			divContent.appendChild(bookYear);
 			divFooter.appendChild(buttonEdit);
-			divFooter.appendChild(buttonDelete);
+			divFooter.appendChild(buttonDelete);			
+
+			var hr = document.createElement('hr');
 
 			book.appendChild(divHeader);
 			book.appendChild(divContent);
 			book.appendChild(divFooter);
+			book.appendChild(hr);
 
 			var bookPanel = document.querySelector('.book-panel');
 			bookPanel.appendChild(book);
@@ -194,7 +209,7 @@ window.onload = function()
 			var bN = document.querySelector('.book[data = "' + article + '"]');
 			var bkNm = bN.querySelector('.book-content');
 			bookName = bkNm.querySelector('.book-name');
-			bookName = books[article][1][1];
+			bookName.innerHTML = books[article][1][1];
 			
 			//var newBookName = document.createElement('h4');
 			//newBookName.className = "book-name";
@@ -216,7 +231,7 @@ window.onload = function()
 			var bY = document.querySelector('.book[data = "' + article + '"]');
 			var bkYr = bY.querySelector('.book-content');
 			bookYear = bkYr.querySelector('.book-year');
-			bookYear.innerHTML = books[article][3][1];
+			bookYear.innerHTML = books[article][3][1] + ' г.';
 			
 			//var newBookYear = document.createElement('h5');
 			//newBookYear.className = "book-year";
@@ -267,20 +282,20 @@ window.onload = function()
 	function editBook()
 	{
 		var data = this.getAttribute('data');
-		//console.log(data);
+		//console.log(data = ', data);
 		var valueCover = document.querySelector('.book-cover');
 		var valueName = document.querySelector('.book-name');
 		var valueAuthor = document.querySelector('.book-author');
 		var valueYear = document.querySelector('.book-year');
 
-		//console.log(valueName);	
+		//console.log('valueName = ', valueName);
 
 		document.getElementById('book-cover').value = books[data][0][1];
 		document.getElementById('book-name').value = books[data][1][1];
 		document.getElementById('book-author').value = books[data][2][1];
 		document.getElementById('book-year').value = books[data][3][1];
 
-		//console.log(bookName);
+		//console.log('bookName = ', bookName);
 
 		modal.style.display = "block";
 		buttonSave.setAttribute('data', data);
@@ -290,10 +305,10 @@ window.onload = function()
 	{
 		var data = this.getAttribute('data');
 		var bookPanel = document.querySelector('.book-panel');
-		//console.log(bookPanel);
+		//console.log('bookPanel = ', bookPanel);
 		var book = document.querySelector('[data = "' + data + '"]');
-		//console.log('book =',book);
-		//console.log('data =', data);
+		//console.log('book = ',book);
+		//console.log('data = ', data);
 		//console.log('book[data] = ', book[data]);
 		//console.log('book.length = ', book.length);
 		bookPanel.removeChild(book);

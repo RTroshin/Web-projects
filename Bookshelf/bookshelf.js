@@ -2,7 +2,7 @@ window.onload = function()
 {
 	var books = {};
 	var article = 0;
-	var modal = document.getElementById('modal-add-book');
+	var modal = document.getElementById('modal-add-book');			// Модальное окно
 
 	var saveBooks = localStorage.getItem('library');
     if (saveBooks)
@@ -12,11 +12,13 @@ window.onload = function()
 		drawBook(article);
 	}
 
-	var buttonOpen = document.getElementById('modal-open');
-	var buttonClose1 = document.getElementById('modal-close');
-	var buttonClose2 = document.getElementsByClassName("close")[0];
+	// Кнопки для взаимодействия с модальным окном
+
+	var buttonOpen = document.getElementById('modal-open'); 		// Кнопка "Добавить книгу"
+	var buttonClose1 = document.getElementById('modal-close'); 		// Кнопка "Отмена"
+	var buttonClose2 = document.getElementsByClassName("close")[0]; // Кнопка "Крестик"
 	//var buttonClose2 = document.querySelector(".close");	
-	var buttonSave = document.getElementById('modal-save');
+	var buttonSave = document.getElementById('modal-save');			// Кнопка "Сохранить"
 
 	buttonOpen.onclick = function()
 	{
@@ -50,7 +52,7 @@ window.onload = function()
 	// Функции для добавления, изменения и удаления книг
 
 	function addBook()
-	{		
+	{
 		var data = buttonSave.getAttribute('data');
 		//console.log('data = ', data);
 

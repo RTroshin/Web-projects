@@ -331,5 +331,26 @@ window.onload = function()
 		delete books[data];
 		//console.log('books = ', books);
 		//console.log('books[data] = ', books[data]);
+		
+		//var library = JSON.parse(localStorage.getItem('library'));
+		//console.log(Object.keys(books).length);
+		//console.log(Object.keys(library).length);
+
+		var count = 0;
+		for (var key in books)
+		{
+			count++;
+		}
+
+		//if (Object.keys(library).length == 0)
+		//if (Object.keys(books).length == 0)
+		if (count == 0)
+		{
+			localStorage.removeItem('library');						// Удаление ключа
+		}
+		else
+		{
+			localStorage.setItem('library', JSON.stringify(books));	// Обновление значений в ключе
+		}
 	}
 }

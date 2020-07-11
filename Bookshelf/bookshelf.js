@@ -4,12 +4,26 @@ window.onload = function()
 	var article = 0;
 	var modal = document.getElementById('modal-add-book');			// Модальное окно
 
+//	books = JSON.parse(localStorage.getItem('library'));
+//
 	var saveBooks = localStorage.getItem('library');
     if (saveBooks)
 	{
-		article++;
         books = JSON.parse(saveBooks);
-		drawBook(article);
+		//console.log(books);
+		if (books[article] == undefined)
+		{
+			//console.log(books[article]);
+			while (books[article] == undefined)
+			{
+				article++
+				//console.log(article);
+			}
+		}
+		for (var key in books)
+		{
+			drawBook(key);
+		}
 	}
 
 	// Кнопки для взаимодействия с модальным окном
@@ -52,7 +66,7 @@ window.onload = function()
 	// Функции для добавления, изменения и удаления книг
 
 	function addBook()
-	{	
+	{
 		var data = buttonSave.getAttribute('data-article');
 		//console.log('data = ', data);
 
@@ -76,8 +90,6 @@ window.onload = function()
 		book[2][1] = document.getElementById("book-author").value;
 		book[3][0] = document.getElementById("book-year").className;
 		book[3][1] = document.getElementById("book-year").value;
-
-		//console.log(formData);
 
 		/*
 		for (var i = 0; i < 4; i++)
@@ -122,7 +134,7 @@ window.onload = function()
 			var divHeader = document.createElement('div');
 			divHeader.className = "book-header";
 			divHeader.id = "book-header";
-
+			
 			var bookCover = document.createElement('img');
 			bookCover.className = "book-cover";
 			bookCover.src = books[article][0][1];
@@ -317,7 +329,7 @@ window.onload = function()
 		//console.log(books);	
 		//console.log('books[data] = ', books[data]);	
 		delete books[data];
-		//console.log(books);
-		//console.log('books[data] = ', books[data]);	
+		//console.log('books = ', books);
+		//console.log('books[data] = ', books[data]);
 	}
 }

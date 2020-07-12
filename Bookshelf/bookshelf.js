@@ -143,15 +143,15 @@ window.onload = function()
 			divContent.className = "book-content";
 			divContent.id = "book-content";
 
-			var bookName = document.createElement('h4');
+			var bookName = document.createElement('h3');
 			bookName.className = "book-name";
 			bookName.innerHTML = books[article][1][1];
 
-			var bookAuthor = document.createElement('h5');
+			var bookAuthor = document.createElement('h4');
 			bookAuthor.className = "book-author";
 			bookAuthor.innerHTML = books[article][2][1];
 
-			var bookYear = document.createElement('h5');
+			var bookYear = document.createElement('h4');
 			bookYear.className = "book-year";
 			bookYear.innerHTML = books[article][3][1] + ' г.';
 

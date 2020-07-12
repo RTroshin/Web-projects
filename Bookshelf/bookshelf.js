@@ -5,24 +5,25 @@ window.onload = function()
 	var modal = document.getElementById('modal-add-book');			// Модальное окно
 
 //	books = JSON.parse(localStorage.getItem('library'));
-//
+
 	var saveBooks = localStorage.getItem('library');
     if (saveBooks)
 	{
         books = JSON.parse(saveBooks);
-		//console.log(books);
+		//console.log('books = ', books);
 		if (books[article] == undefined)
 		{
-			//console.log(books[article]);
+			//console.log('books[article]', books[article]);
 			while (books[article] == undefined)
 			{
 				article++
-				//console.log(article);
+				//console.log('article = ', article);
 			}
 		}
 		for (var key in books)
 		{
 			drawBook(key);
+			article = key;
 		}
 	}
 
@@ -30,7 +31,7 @@ window.onload = function()
 
 	var buttonOpen = document.getElementById('modal-open'); 		// Кнопка "Добавить книгу"
 	var buttonClose1 = document.getElementById('modal-close'); 		// Кнопка "Отмена"
-	var buttonClose2 = document.getElementsByClassName("close")[0]; // Кнопка "Крестик"
+	var buttonClose2 = document.getElementsByClassName("close")[0];	// Кнопка "Крестик"
 	//var buttonClose2 = document.querySelector(".close");	
 	var buttonSave = document.getElementById('modal-save');			// Кнопка "Сохранить"
 
@@ -51,6 +52,7 @@ window.onload = function()
 
 	buttonSave.onclick = function()
 	{
+		//console.log('article = ', article);
 		addBook();
 		modal.style.display = "none";
 	}
@@ -67,7 +69,7 @@ window.onload = function()
 
 	function addBook()
 	{
-		var data = buttonSave.getAttribute('data-article');
+		var data = buttonSave.getAttribute('data-edit');
 		//console.log('data = ', data);
 
 		var book = [];
@@ -289,7 +291,7 @@ window.onload = function()
 			
 			//bookPanel.replaceChild(book, newBook);
 
-			buttonSave.removeAttribute('data-article');
+			buttonSave.removeAttribute('data-edit');
 		}
 	}
 
@@ -312,7 +314,7 @@ window.onload = function()
 		//console.log('bookName = ', bookName);
 
 		modal.style.display = "block";
-		buttonSave.setAttribute('data-article', data);
+		buttonSave.setAttribute('data-edit', data);
 	}
 
 	function deleteBook()

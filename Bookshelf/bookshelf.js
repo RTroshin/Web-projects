@@ -11,17 +11,6 @@ window.onload = function()
 	{
         books = JSON.parse(saveBooks);
 		//console.log('books = ', books);
-		/*
-		if (books[article] == undefined)
-		{
-			//console.log('books[article]', books[article]);
-			while (books[article] == undefined)
-			{
-				article++
-				//console.log('article = ', article);
-			}
-		}
-		*/
 		for (var key in books)
 		{
 			drawBook(key);
@@ -33,7 +22,7 @@ window.onload = function()
 
 	var buttonOpen = document.getElementById('modal-open'); 		// Кнопка "Добавить книгу"
 	var buttonClose1 = document.getElementById('modal-close'); 		// Кнопка "Отмена"
-	var buttonClose2 = document.getElementsByClassName("close")[0];	// Кнопка "Крестик"
+	var buttonClose2 = document.getElementsByClassName("close")[0]; // Кнопка "Крестик"
 	//var buttonClose2 = document.querySelector(".close");	
 	var buttonSave = document.getElementById('modal-save');			// Кнопка "Сохранить"
 

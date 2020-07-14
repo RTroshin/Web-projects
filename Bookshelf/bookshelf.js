@@ -21,10 +21,9 @@ window.onload = function()
 	// Кнопки для взаимодействия с модальным окном
 
 	var buttonOpen = document.getElementById('modal-open'); 		// Кнопка "Добавить книгу"
-	var buttonClose1 = document.getElementById('modal-close'); 		// Кнопка "Отмена"
-	var buttonClose2 = document.getElementsByClassName("close")[0]; // Кнопка "Крестик"
-	//var buttonClose2 = document.querySelector(".close");	
 	var buttonSave = document.getElementById('modal-save');			// Кнопка "Сохранить"
+	var buttonClose1 = document.getElementById('modal-close'); 		// Кнопка "Отмена"
+	var buttonClose2 = document.querySelector(".close");			// Кнопка "Крестик"
 
 	buttonOpen.onclick = function()
 	{
@@ -195,7 +194,6 @@ window.onload = function()
 			//var newDivHeader = document.createElement('div');
 			//newDivHeader.className = "book-header";
 
-			//bookCover = document.getElementsByClassName('book-cover[value]');	
 			var bC = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkCr = bC.querySelector('.book-header');
 			bookCover = bkCr.querySelector('.book-cover');	
@@ -212,7 +210,6 @@ window.onload = function()
 			//var newDivContent = document.createElement('div');
 			//newDivContent.className = "book-content";
 
-			//bookName = document.getElementsByClassName('book-name').value;
 			var bN = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkNm = bN.querySelector('.book-content');
 			bookName = bkNm.querySelector('.book-name');
@@ -222,8 +219,6 @@ window.onload = function()
 			//newBookName.className = "book-name";
 			//newBookName.innerHTML = books[article][1][1];
 
-
-			//bookAuthor = document.getElementsByClassName('book-author').value;
 			var bA = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkAr = bA.querySelector('.book-content');
 			bookAuthor = bkAr.querySelector('.book-author');
@@ -233,8 +228,6 @@ window.onload = function()
 			//newBookAuthor.className = "book-author";
 			//newBookAuthor.innerHTML = books[article][2][1];
 
-
-			//bookYear = document.getElementsByClassName('book-year').value;
 			var bY = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkYr = bY.querySelector('.book-content');
 			bookYear = bkYr.querySelector('.book-year');
@@ -243,7 +236,6 @@ window.onload = function()
 			//var newBookYear = document.createElement('h5');
 			//newBookYear.className = "book-year";
 			//newBookYear.innerHTML = books[article][3][1];
-
 
 			//var divFooter = document.querySelector('.book-footer');
 

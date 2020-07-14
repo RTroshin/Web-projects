@@ -11,6 +11,7 @@ window.onload = function()
 	{
         books = JSON.parse(saveBooks);
 		//console.log('books = ', books);
+		/*
 		if (books[article] == undefined)
 		{
 			//console.log('books[article]', books[article]);
@@ -20,6 +21,7 @@ window.onload = function()
 				//console.log('article = ', article);
 			}
 		}
+		*/
 		for (var key in books)
 		{
 			drawBook(key);

@@ -254,11 +254,6 @@ window.onload = function()
 	
 			//var bookPanel = document.querySelector('.book-panel');
 			//bookPanel.appendChild(newBook);
-			
-	//		divHeader.replaceChild(newBookCover, bookCover);
-	//		divContent.replaceChild(newBookName, bookName);
-	//		divContent.replaceChild(newBookAuthor, bookAuthor);
-	//		divContent.replaceChild(newBookYear, bookYear);
 
 			//divHeader.replaceChild(bookCover, newBookCover);
 			//divContent.replaceChild(bookName, newBookName);
@@ -311,12 +306,10 @@ window.onload = function()
 		//console.log('book[data] = ', book[data]);
 		//console.log('book.length = ', book.length);
 		bookPanel.removeChild(book);
-		//console.log(books);	
-		//console.log('books[data] = ', books[data]);	
-		delete books[data];
-		//console.log('books = ', books);
 		//console.log('books[data] = ', books[data]);
-		
+		delete books[data];
+		//console.log('books[data] = ', books[data]);
+
 		//var library = JSON.parse(localStorage.getItem('library'));
 		//console.log(Object.keys(books).length);
 		//console.log(Object.keys(library).length);

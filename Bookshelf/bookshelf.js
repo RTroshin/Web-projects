@@ -284,12 +284,6 @@ window.onload = function()
 		var data = this.getAttribute('data-article');
 		//console.log(data = ', data);
 		/*
-		var valueCover = document.querySelector('.book-cover');
-		var valueName = document.querySelector('.book-name');
-		var valueAuthor = document.querySelector('.book-author');
-		var valueYear = document.querySelector('.book-year');
-
-		console.log('valueName = ', valueName);
 		console.log('books[data][1][1] = ', books[data][1][1]);
 
 		document.getElementById('book-cover').value = books[data][0][1];

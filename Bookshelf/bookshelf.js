@@ -4,7 +4,7 @@ window.onload = function()
 	var article = 0;
 	var modal = document.getElementById('modal-add-book');			// Модальное окно
 
-//	books = JSON.parse(localStorage.getItem('library'));
+	//	books = JSON.parse(localStorage.getItem('library'));
 
 	var saveBooks = localStorage.getItem('library');
     if (saveBooks)
@@ -98,7 +98,7 @@ window.onload = function()
 		{
 			article++;	
 			books[article] = book;
-
+			console.log('book = ', book);
 			//console.log('books = ', books);
 
 			drawBook(article);
@@ -106,7 +106,7 @@ window.onload = function()
 		else
 		{
 			books[data] = book;
-			//console.log('book = ', book);
+			console.log('book = ', book);
 			//console.log('books[data] = ', books[data]);
 			drawBook(data);
 		}
@@ -115,11 +115,10 @@ window.onload = function()
 
 	function drawBook(article)
 	{
-		var book = document.querySelectorAll('.book[data-article = "' + article + '"]');
-		console.log('book = ', book);
-		console.log('book.length = ', book.length);		
-		console.log('Object.book.length = ', Object.keys(book).length);
-		if (book.length == 0)
+		var bookArticle = document.querySelectorAll('.book[data-article = "' + article + '"]');
+		console.log('book = ', bookArticle);
+		console.log('bookArticle.length = ', bookArticle.length);
+		if (bookArticle.length == 0)
 		{
 			var book = document.createElement('div');
 			book.className = "book";
@@ -282,7 +281,7 @@ window.onload = function()
 	function editBook()
 	{
 		var data = this.getAttribute('data-article');
-		console.log('data = ', data);
+		//console.log('data = ', data);
 
 		//console.log('books[data][1][1] = ', books[data][1][1]);
 

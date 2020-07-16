@@ -283,6 +283,7 @@ window.onload = function()
 	{
 		var data = this.getAttribute('data-article');
 		//console.log(data = ', data);
+		/*
 		var valueCover = document.querySelector('.book-cover');
 		var valueName = document.querySelector('.book-name');
 		var valueAuthor = document.querySelector('.book-author');
@@ -297,7 +298,7 @@ window.onload = function()
 		document.getElementById('book-year').value = books[data][3][1];
 
 		console.log('books[data][1][1] = ', books[data][1][1]);
-
+		*/
 		modal.style.display = "block";
 		buttonSave.setAttribute('data-edit', data);
 	}

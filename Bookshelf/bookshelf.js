@@ -282,17 +282,17 @@ window.onload = function()
 	function editBook()
 	{
 		var data = this.getAttribute('data-article');
-		//console.log(data = ', data);
-		/*
-		console.log('books[data][1][1] = ', books[data][1][1]);
+		console.log('data = ', data);
+
+		//console.log('books[data][1][1] = ', books[data][1][1]);
 
 		document.getElementById('book-cover').value = books[data][0][1];
 		document.getElementById('book-name').value = books[data][1][1];
 		document.getElementById('book-author').value = books[data][2][1];
 		document.getElementById('book-year').value = books[data][3][1];
 
-		console.log('books[data][1][1] = ', books[data][1][1]);
-		*/
+		//console.log('books[data][1][1] = ', books[data][1][1]);
+		
 		modal.style.display = "block";
 		buttonSave.setAttribute('data-edit', data);
 	}
@@ -311,7 +311,7 @@ window.onload = function()
 		delete books[data];
 		//console.log('books[data] = ', books[data]);
 
-		console.log(Object.keys(books).length);
+		//console.log(Object.keys(books).length);
 
 		var count = 0;
 		for (var key in books)

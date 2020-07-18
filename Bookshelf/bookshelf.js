@@ -244,9 +244,7 @@ window.onload = function()
 
 			//var divFooter = document.querySelector('.book-footer');
 
-			//console.log('newBookCover = ', newBookCover);
 			//console.log('bookCover = ', bookCover);
-			//console.log('newBookName = ', newBookName);
 			//console.log('bookName = ', bookName);
 
 			//newDivHeader.appendChild(newBookCover);
@@ -264,9 +262,6 @@ window.onload = function()
 			//divContent.replaceChild(bookName, newBookName);
 			//divContent.replaceChild(bookAuthor, newBookAuthor);
 			//divContent.replaceChild(bookYear, newBookYear);
-
-			//console.log('newBookName = ', newBookName);
-			//console.log('bookName = ', bookName);
 
 			//book[article].replaceChild(divHeader, newDivHeader);
 			//book[article].replaceChild(divContent, newDivContent);

@@ -186,7 +186,7 @@ window.onload = function()
 		else
 		{
 			var dataArticle = document.querySelector('.book[data-article = "' + article + '"]');		
-			//var book = [];
+
 			//book[article] = document.querySelector('[data-article = "' + article + '"]');
 
 			//var newBook = document.createElement('div');
@@ -199,7 +199,6 @@ window.onload = function()
 			//newDivHeader.className = "book-header";
 
 			//var bC = document.querySelector('.book[data-article = "' + article + '"]');
-			//console.log(bC);
 			var bookHeader = dataArticle.querySelector('.book-header');
 			bookCover = bookHeader.querySelector('.book-cover');	
 			bookCover.src = books[article][0][1];
@@ -216,7 +215,6 @@ window.onload = function()
 			//newDivContent.className = "book-content";
 
 			//var bN = document.querySelector('.book[data-article = "' + article + '"]');
-			//console.log(bN);
 			var bookContent = dataArticle.querySelector('.book-content');
 			bookName = bookContent.querySelector('.book-name');
 			bookName.innerHTML = books[article][1][1];
@@ -226,7 +224,6 @@ window.onload = function()
 			//newBookName.innerHTML = books[article][1][1];
 
 			//var bA = document.querySelector('.book[data-article = "' + article + '"]');
-			//console.log(bA);
 			var bkAr = dataArticle.querySelector('.book-content');
 			bookAuthor = bkAr.querySelector('.book-author');
 			bookAuthor.innerHTML = books[article][2][1];
@@ -236,7 +233,6 @@ window.onload = function()
 			//newBookAuthor.innerHTML = books[article][2][1];
 
 			//var bY = document.querySelector('.book[data-article = "' + article + '"]');
-			//console.log(bY);
 			var bkYr = dataArticle.querySelector('.book-content');
 			bookYear = bkYr.querySelector('.book-year');
 			bookYear.innerHTML = books[article][3][1] + ' г.';

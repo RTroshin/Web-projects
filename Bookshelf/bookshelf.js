@@ -171,7 +171,7 @@ window.onload = function()
 			divContent.appendChild(bookAuthor);
 			divContent.appendChild(bookYear);
 			divFooter.appendChild(buttonEdit);
-			divFooter.appendChild(buttonDelete);			
+			divFooter.appendChild(buttonDelete);
 
 			var hr = document.createElement('hr');
 
@@ -185,20 +185,17 @@ window.onload = function()
 		}
 		else
 		{
-			var dataArticle = document.querySelector('.book[data-article = "' + article + '"]');		
-
-			//book[article] = document.querySelector('[data-article = "' + article + '"]');
+			var dataArticle = document.querySelector('.book[data-article = "' + article + '"]');
 
 			//var newBook = document.createElement('div');
 			//newBook.className = "book";
 
 			//var divHeader = document.querySelector("book-header");
 			//var divHeader = document.getElementById('book-header');
-			//console.log('divHeader = ' ,divHeader);
+
 			//var newDivHeader = document.createElement('div');
 			//newDivHeader.className = "book-header";
 
-			//var bC = document.querySelector('.book[data-article = "' + article + '"]');
 			var bookHeader = dataArticle.querySelector('.book-header');
 			bookCover = bookHeader.querySelector('.book-cover');	
 			bookCover.src = books[article][0][1];
@@ -214,7 +211,6 @@ window.onload = function()
 			//var newDivContent = document.createElement('div');
 			//newDivContent.className = "book-content";
 
-			//var bN = document.querySelector('.book[data-article = "' + article + '"]');
 			var bookContent = dataArticle.querySelector('.book-content');
 			bookName = bookContent.querySelector('.book-name');
 			bookName.innerHTML = books[article][1][1];
@@ -223,7 +219,6 @@ window.onload = function()
 			//newBookName.className = "book-name";
 			//newBookName.innerHTML = books[article][1][1];
 
-			//var bA = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkAr = dataArticle.querySelector('.book-content');
 			bookAuthor = bkAr.querySelector('.book-author');
 			bookAuthor.innerHTML = books[article][2][1];
@@ -232,7 +227,6 @@ window.onload = function()
 			//newBookAuthor.className = "book-author";
 			//newBookAuthor.innerHTML = books[article][2][1];
 
-			//var bY = document.querySelector('.book[data-article = "' + article + '"]');
 			var bkYr = dataArticle.querySelector('.book-content');
 			bookYear = bkYr.querySelector('.book-year');
 			bookYear.innerHTML = books[article][3][1] + ' г.';

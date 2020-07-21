@@ -67,9 +67,7 @@ window.onload = function()
 		{
 			book[i] = [];
 			for (var j = 0; j < 2; j++)
-			//{
 				book[i][j] = 0;
-			//}
 		}
 		
 		//console.log('book = ', book);
@@ -88,9 +86,7 @@ window.onload = function()
 		{
 			books[i] = [];
 			for (var j = 0; j < 1; j++)
-			{
 				books[i] = book[i][j];
-			}
 		}
 		*/
 
@@ -141,7 +137,6 @@ window.onload = function()
 			var bookName = document.createElement('h3');
 			bookName.className = "book-name";
 			bookName.innerHTML = books[article][1][1];
-			//bookName.innerHTML = document.getElementById("book-name").value;
 
 			var bookAuthor = document.createElement('h4');
 			bookAuthor.className = "book-author";
@@ -189,9 +184,6 @@ window.onload = function()
 			var dataArticle = document.querySelector('.book[data-article = "' + article + '"]');
 			console.log(dataArticle);
 
-			//var newBook = document.createElement('div');
-			//newBook.className = "book";
-
 			//var divHeader = document.querySelector("book-header");
 			//var divHeader = document.getElementById('book-header');
 
@@ -223,8 +215,6 @@ window.onload = function()
 			bookYear = bookContent.querySelector('.book-year');
 			//bookYear.innerHTML = books[article][3][1] + ' г.';
 			bookYear.innerHTML = document.getElementById('book-year').value + ' г.';
-
-			//var divFooter = document.querySelector('.book-footer');
 
 			//newDivHeader.appendChild(newBookCover);
 			//newDivContent.appendChild(newBookName);
@@ -288,18 +278,12 @@ window.onload = function()
 
 		var count = 0;
 		for (var key in books)
-		//{
 			count++;
-		//}
-		//console.log(count);
+
 		//if (Object.keys(books).length == 0)
 		if (count == 0)
-		//{
 			localStorage.removeItem('library');						// Удаление ключа
-		//}
 		else
-		//{
 			localStorage.setItem('library', JSON.stringify(books));	// Обновление значений в ключе
-		//}
 	}
 }

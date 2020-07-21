@@ -204,10 +204,6 @@ window.onload = function()
 			//bookName.innerHTML = books[article][1][1];
 			bookName.innerHTML = document.getElementById('book-name').value
 
-			//var newBookName = document.createElement('h4');
-			//newBookName.className = "book-name";
-			//newBookName.innerHTML = books[article][1][1];
-
 			bookAuthor = bookContent.querySelector('.book-author');
 			//bookAuthor.innerHTML = books[article][2][1];
 			bookAuthor.innerHTML = document.getElementById('book-author').value
@@ -223,9 +219,6 @@ window.onload = function()
 
 			//book[article].appendChild(newDivHeader);
 			//book[article].appendChild(newDivContent);
-	
-			//var bookPanel = document.querySelector('.book-panel');
-			//bookPanel.appendChild(newBook);
 
 			//divHeader.replaceChild(bookCover, newBookCover);
 			//divContent.replaceChild(bookName, newBookName);
@@ -235,8 +228,6 @@ window.onload = function()
 			//book[article].replaceChild(divHeader, newDivHeader);
 			//book[article].replaceChild(divContent, newDivContent);
 			//book[article].appendChild(divFooter);
-			
-			//bookPanel.replaceChild(book, newBook);
 
 			buttonSave.removeAttribute('data-edit');
 		}
@@ -264,11 +255,9 @@ window.onload = function()
 	{
 		var data = this.getAttribute('data-article');
 		var bookPanel = document.querySelector('.book-panel');
-		//console.log('bookPanel = ', bookPanel);
 		var book = document.querySelector('[data-article = "' + data + '"]');
 		//console.log('book = ',book);
 		//console.log('data = ', data);
-		//console.log('book[data] = ', book[data]);
 		bookPanel.removeChild(book);
 		//console.log('books[data] = ', books[data]);
 		delete books[data];

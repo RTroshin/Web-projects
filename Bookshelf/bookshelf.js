@@ -184,12 +184,6 @@ window.onload = function()
 			var dataArticle = document.querySelector('.book[data-article = "' + article + '"]');
 			console.log(dataArticle);
 
-			//var divHeader = document.querySelector("book-header");
-			//var divHeader = document.getElementById('book-header');
-
-			//var newDivHeader = document.createElement('div');
-			//newDivHeader.className = "book-header";
-
 			var bookHeader = dataArticle.querySelector('.book-header');
 			bookCover = bookHeader.querySelector('.book-cover');	
 			//bookCover.src = books[article][0][1];
@@ -216,9 +210,6 @@ window.onload = function()
 			//newDivContent.appendChild(newBookName);
 			//newDivContent.appendChild(newBookAuthor);
 			//newDivContent.appendChild(newBookYear);
-
-			//book[article].appendChild(newDivHeader);
-			//book[article].appendChild(newDivContent);
 
 			//divHeader.replaceChild(bookCover, newBookCover);
 			//divContent.replaceChild(bookName, newBookName);

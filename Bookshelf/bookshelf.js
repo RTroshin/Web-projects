@@ -189,10 +189,6 @@ window.onload = function()
 			//bookCover.src = books[article][0][1];
 			bookCover.src = document.getElementById('book-cover').value
 
-			//var newBookCover = document.createElement('img');
-			//newBookCover.className = "book-cover";
-			//newBookCover.src = books[article][0][1];
-
 			var bookContent = dataArticle.querySelector('.book-content');
 			bookName = bookContent.querySelector('.book-name');
 			//bookName.innerHTML = books[article][1][1];
@@ -215,10 +211,6 @@ window.onload = function()
 			//divContent.replaceChild(bookName, newBookName);
 			//divContent.replaceChild(bookAuthor, newBookAuthor);
 			//divContent.replaceChild(bookYear, newBookYear);
-
-			//book[article].replaceChild(divHeader, newDivHeader);
-			//book[article].replaceChild(divContent, newDivContent);
-			//book[article].appendChild(divFooter);
 
 			buttonSave.removeAttribute('data-edit');
 		}

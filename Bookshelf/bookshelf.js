@@ -202,11 +202,6 @@ window.onload = function()
 			//bookYear.innerHTML = books[article][3][1] + ' г.';
 			bookYear.innerHTML = document.getElementById('book-year').value + ' г.';
 
-			//newDivHeader.appendChild(newBookCover);
-			//newDivContent.appendChild(newBookName);
-			//newDivContent.appendChild(newBookAuthor);
-			//newDivContent.appendChild(newBookYear);
-
 			//divHeader.replaceChild(bookCover, newBookCover);
 			//divContent.replaceChild(bookName, newBookName);
 			//divContent.replaceChild(bookAuthor, newBookAuthor);

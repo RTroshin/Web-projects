@@ -75,15 +75,17 @@ body
     box-shadow: inset 0 -8px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(cc,66,00,0);
     transition: box-shadow .2s, border-color .2s;
 } 
-.button-open:hover
+
+/*.button-open:hover
 {
 	cursor: pointer;
     box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
 }
+
 .button-open:active
 {
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}
+}*/
 
 .book-panel
 {
@@ -202,16 +204,16 @@ body
     transition: box-shadow .2s, border-color .2s;
 }
 
-.button-edit:hover
+/*button:hover
 {
     cursor: pointer;
     box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
-}
+}*/
 
-.button-edit:active
+/*button:active
 {
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}
+}*/
 
 .button-delete
 {
@@ -240,13 +242,13 @@ body
     transition: box-shadow .2s, border-color .2s;
 }
 
-.button-delete:hover
+button:hover
 {
     cursor: pointer;
     box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
 }
 
-.button-delete:active
+button:active
 {
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
 }
@@ -408,7 +410,7 @@ body
     transition: box-shadow .2s, border-color .2s;
 } 
 
-.button-save:hover
+/*.button-save:hover
 {
 	cursor: pointer;
     box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
@@ -417,7 +419,7 @@ body
 .button-save:active
 {
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}
+}*/
 
 .button-close
 {
@@ -446,7 +448,7 @@ body
     transition: box-shadow .2s, border-color .2s;
 }
 
-.button-close:hover
+/*.button-close:hover
 {
 	cursor: pointer;
     box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
@@ -455,7 +457,7 @@ body
 .button-close:active
 {
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}
+}*/
 
 .footer
 {
@@ -464,7 +466,7 @@ body
     background: linear-gradient(to top, #434445, #111111);
     width: 100%;
     height: 110px;
-    text-align: right;
+    text-align: left;
     color: #a4a4a4;
     font-size: 13px;
     font-weight: 100;
@@ -477,12 +479,12 @@ body
 {
     padding-top: 7px;
     padding-left: 150px;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 .footer-contacts
 {
 	float: right;
     padding-right: 30px;
-    text-align: left;
+    /*text-align: left;*/
 }

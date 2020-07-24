@@ -202,11 +202,6 @@ window.onload = function()
 			//bookYear.innerHTML = books[article][3][1] + ' г.';
 			bookYear.innerHTML = document.getElementById('book-year').value + ' г.';
 
-			//divHeader.replaceChild(bookCover, newBookCover);
-			//divContent.replaceChild(bookName, newBookName);
-			//divContent.replaceChild(bookAuthor, newBookAuthor);
-			//divContent.replaceChild(bookYear, newBookYear);
-
 			buttonSave.removeAttribute('data-edit');
 		}
 	}

@@ -74,18 +74,7 @@ body
     background: rgb(0,0,0) linear-gradient(rgb(cc,66,00), rgb(99,33,00));
     box-shadow: inset 0 -8px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(cc,66,00,0);
     transition: box-shadow .2s, border-color .2s;
-} 
-
-/*.button-open:hover
-{
-	cursor: pointer;
-    box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
 }
-
-.button-open:active
-{
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}*/
 
 .book-panel
 {
@@ -203,17 +192,6 @@ body
     box-shadow: inset 0 -8px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(cc,66,00,0);
     transition: box-shadow .2s, border-color .2s;
 }
-
-/*button:hover
-{
-    cursor: pointer;
-    box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
-}*/
-
-/*button:active
-{
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}*/
 
 .button-delete
 {
@@ -408,18 +386,7 @@ button:active
     background: rgb(0,0,0) linear-gradient(rgb(cc,66,00), rgb(99,33,00));
     box-shadow: inset 0 -8px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(cc,66,00,0);
     transition: box-shadow .2s, border-color .2s;
-} 
-
-/*.button-save:hover
-{
-	cursor: pointer;
-    box-shadow: inset 0 -4px 4px rgba(0,0,0,0), inset 0 4px 8px rgba(0,0,0,0), inset 0 0 0 230px rgba(00,00,00,.1);
 }
-
-.button-save:active
-{
-    box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
-}*/
 
 .button-close
 {

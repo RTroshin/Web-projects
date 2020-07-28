@@ -41,19 +41,11 @@ button:active
     box-shadow: inset 0 -2px 4px rgba(0,0,0,.3), inset 0 4px 8px rgba(0,0,0,.6), inset 0 0 0 230px rgba(00,00,00,.15);
 }
 
-.content
-{
-    min-width: 1300px;
-    min-height: calc(150vh);
-    background: #eeeeee;
-    margin: auto;
-}
-
 .header
 {
 	min-width: 1300px;
+    height: 80px;
     background: linear-gradient(to right, #555555, #111111);
-	height: 80px;
     margin: auto;
 }
 
@@ -93,7 +85,16 @@ button:active
 
 .button-open
 {
-    margin-right: 100px;
+    right: 100px;
+    /* margin-right: 100px; */
+}
+
+.content
+{
+    min-width: 1300px;
+    min-height: calc(150vh);
+    background: #eeeeee;
+    margin: auto;
 }
 
 .book-panel
@@ -122,10 +123,10 @@ button:active
 
 .book-header
 {
-    background-color: #eeeeee;
 	display: table-cell;
 	width: 15%;
     height: 180px;
+    background-color: #eeeeee;
 }
 
 .book-header img
@@ -135,19 +136,21 @@ button:active
     width: 140px
 }
 
+/*
 .book-cover
 {
     height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+*/
 
 .book-content
 {
-    background-color: #ffffff;
-	display: table-cell;
-	width: 60%;
+    display: table-cell;
+    width: 60%;
     height: 180px;
+    background-color: #ffffff;
     border-radius: 5px;
     padding-left: 60px;
 }
@@ -178,10 +181,10 @@ button:active
 
 .book-footer
 {
-    background: linear-gradient(to top, #cccccc, #aaaaaa);
 	display: table-cell;
 	width: 10%;
     height: 180px;
+    background: linear-gradient(to top, #cccccc, #aaaaaa);
     border-radius: 5px;
     padding: 7px;
 }
@@ -189,7 +192,6 @@ button:active
 .book-footer button
 {
     position: relative;
-    left: 8px;
     width: 150px;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
@@ -215,11 +217,13 @@ button:active
 .button-edit
 {
     top: 55px;
+    left: 8px;
 }
 
 .button-delete
 {
     top: 40px;
+    left: 8px;
 }
 
 .modal

@@ -82,13 +82,18 @@ button:active
 	margin: 0 auto;
 }
 
+.button-header button
+{
+    position: relative;
+    float: right;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+}
+
 .button-open
 {
-	float: right;
-	width: 180px;
-	background-color: rgba(0, 0, 0, 0.1);
     margin-right: 100px;
-    border-radius: 1px;
 }
 
 .book-panel

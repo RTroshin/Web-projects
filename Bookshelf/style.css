@@ -345,6 +345,7 @@ button:active
 {
     display: inline-block;
     position: relative;
+    width: 150px;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
@@ -368,10 +369,7 @@ button:active
 
 .button-save
 {
-    display: inline-block;
-	position: relative;
 	left: 5px;
-	width: 150px;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
@@ -395,10 +393,7 @@ button:active
 
 .button-close
 {
-    display: inline-block;
-	position: relative;
 	left: 10px;
-	width: 150px;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.6);
     text-align: center;

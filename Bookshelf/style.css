@@ -370,11 +370,6 @@ button:active
 .button-save
 {
 	left: 5px;
-    text-align: center;
-    text-decoration: none;
-	font-size: 16px; 
-	font-weight: 250;
-    font-style: italic;
     color: #ffffff;
     line-height: 25px;
     padding: 5px;
@@ -392,11 +387,6 @@ button:active
 .button-close
 {
 	left: 10px;
-    text-align: center;
-    text-decoration: none;
-	font-size: 16px; 
-	font-weight: 250;
-    font-style: italic;
     color: #ffffff;
     line-height: 25px;
     padding: 5px;

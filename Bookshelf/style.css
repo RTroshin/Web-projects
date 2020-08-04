@@ -377,8 +377,6 @@ button:active
     margin-bottom: 23px;
     border: 0;
 	border-radius: 5px;
-    user-select: none;
-    outline: none;
 }
 
 .button-close
@@ -391,8 +389,6 @@ button:active
     margin-bottom: 23px;
     border: 0;
 	border-radius: 5px;
-    user-select: none;
-    outline: none;
 }
 
 .footer

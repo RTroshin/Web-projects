@@ -375,8 +375,6 @@ button:active
     padding: 5px;
     margin-top: 13px;
     margin-bottom: 23px;
-    border: 0;
-	border-radius: 5px;
 }
 
 .button-close
@@ -387,8 +385,6 @@ button:active
     padding: 5px;
     margin-top: 13px;
     margin-bottom: 23px;
-    border: 0;
-	border-radius: 5px;
 }
 
 .footer

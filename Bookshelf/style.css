@@ -370,17 +370,11 @@ button:active
 .button-save
 {
 	left: 5px;
-    color: #ffffff;
-    line-height: 25px;
-    padding: 5px;
 }
 
 .button-close
 {
 	left: 10px;
-    color: #ffffff;
-    line-height: 25px;
-    padding: 5px;
 }
 
 .footer

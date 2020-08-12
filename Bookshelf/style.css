@@ -297,6 +297,18 @@ button:active
 }
 */
 
+.form-row input
+{
+    text-align: left;
+    color: #2e353d;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px;
+    margin: 7px;
+    border: 1px;
+    border-radius: 5px;
+}
+
 .form-label
 {
     text-align: left;

@@ -329,7 +329,6 @@ button:active
     padding: 5px;
     margin: 7px;
     border: 1px;
-	border-radius: 5px;
 }
 
 .form-year
@@ -342,7 +341,6 @@ button:active
     padding: 5px;
     margin: 7px;
     border: 1px;
-	border-radius: 5px;
 }
 
 .form-cover
@@ -355,7 +353,6 @@ button:active
     padding: 5px;
     margin: 7px;
     border: 1px;
-	border-radius: 5px;
 }
 
 .modal-footer

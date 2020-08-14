@@ -326,7 +326,6 @@ button:active
     color: #2e353d;
     font-size: 14px;
     font-weight: 400;
-    padding: 5px;
 }
 
 .form-year
@@ -336,7 +335,6 @@ button:active
     color: #2e353d;
     font-size: 14px;
     font-weight: 400;
-    padding: 5px;
 }
 
 .form-cover
@@ -346,7 +344,6 @@ button:active
     color: #2e353d;
     font-size: 14px;
     font-weight: 400;
-    padding: 5px;
 }
 
 .modal-footer

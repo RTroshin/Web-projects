@@ -324,7 +324,6 @@ button:active
     width: 80%;
     text-align: left;
     color: #2e353d;
-    font-size: 14px;
 }
 
 .form-year
@@ -332,7 +331,6 @@ button:active
     width: 10%;
     text-align: left;
     color: #2e353d;
-    font-size: 14px;
 }
 
 .form-cover
@@ -340,7 +338,6 @@ button:active
     width: 80%;
     text-align: left;
     color: #2e353d;
-    font-size: 14px;
 }
 
 .modal-footer

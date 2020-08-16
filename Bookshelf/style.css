@@ -297,8 +297,24 @@ button:active
 }
 */
 
+/*
 .form-row input
 {
+    width: 80%;
+    text-align: left;
+    color: #2e353d;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px;
+    margin: 7px;
+    border: 1px;
+    border-radius: 5px;
+}
+*/
+
+input
+{
+    width: 80%;
     text-align: left;
     color: #2e353d;
     font-size: 14px;
@@ -319,20 +335,24 @@ button:active
     margin: 7px;
 }
 
+/*
 .form-control
 {
     width: 80%;
 }
+*/
 
 .form-year
 {
     width: 10%;
 }
 
+/*
 .form-cover
 {
     width: 80%;
 }
+*/
 
 .modal-footer
 {

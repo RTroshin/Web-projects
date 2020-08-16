@@ -322,19 +322,16 @@ button:active
 .form-control
 {
     width: 80%;
-    text-align: left;
 }
 
 .form-year
 {
     width: 10%;
-    text-align: left;
 }
 
 .form-cover
 {
     width: 80%;
-    text-align: left;
 }
 
 .modal-footer

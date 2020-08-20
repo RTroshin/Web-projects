@@ -59,7 +59,7 @@ button:active
 	min-width: 1300px;
     height: 80px;
     background: linear-gradient(to right, #555555, #111111);
-    margin: auto;
+    /* margin: auto; */
 }
 
 .header h1
@@ -84,7 +84,7 @@ button:active
 	height: 35px;
 	background-color: #333333;
     background: linear-gradient(to top, #777777, #333333);
-	margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .button-header button
@@ -107,7 +107,7 @@ button:active
     min-width: 1300px;
     min-height: calc(150vh);
     background: #eeeeee;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .book-panel

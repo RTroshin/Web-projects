@@ -13,7 +13,6 @@ body
 
 input
 {
-    width: 80%;
     text-align: left;
     color: #2e353d;
     font-size: 14px;
@@ -313,7 +312,6 @@ button:active
 /*
 .form-row input
 {
-    width: 80%;
     text-align: left;
     color: #2e353d;
     font-size: 14px;
@@ -335,9 +333,19 @@ button:active
     margin: 7px;
 }
 
+.form-control
+{
+    width: 80%;
+}
+
 .form-year
 {
     width: 10%;
+}
+
+.form-cover
+{
+    width: 80%;
 }
 
 .modal-footer
@@ -392,6 +400,6 @@ button:active
 {
     position: relative; 
 	float: right;
-    top: 55px; /* Изменить */
+    top: 55px; /* Изменить положение */
     right: 100px;
 }
